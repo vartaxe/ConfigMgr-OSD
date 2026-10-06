@@ -23,6 +23,7 @@ Describe 'Hub branding' {
         $Text = Get-Content -LiteralPath (Join-Path $Root $File) -Raw
         $Text | Should -Match '<source[^>]+banner-compact\.svg'
         $Text | Should -Match '<img[^>]+banner\.svg[^>]+alt="[^"]+"'
+        $Text | Should -Match '<img[^>]+banner\.svg[^>]+width="1280"[^>]+height="320"'
     }
 
     It 'links all three scripts in <Name>' -ForEach @(

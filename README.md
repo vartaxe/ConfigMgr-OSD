@@ -4,7 +4,7 @@
 
 [Website](https://vartaxe.github.io/ConfigMgr-OSD/)
 
-<p align="center"><picture><source media="(max-width: 720px)" srcset="assets/banner-compact.svg?v=1.0.0" width="640"><img src="assets/banner.svg?v=1.0.0" alt="ConfigMgr OSD script hub banner" width="1280"></picture></p>
+<p align="center"><picture><source media="(max-width: 720px)" srcset="assets/banner-compact.svg?v=1.0.0" width="640"><img src="assets/banner.svg?v=1.0.0" alt="ConfigMgr OSD script hub banner" width="1280" height="320"></picture></p>
 
 PowerShell 5.1 scripts for Configuration Manager operating system deployment (OSD) task sequences, each in its own repository with tests, docs and a project site.
 
