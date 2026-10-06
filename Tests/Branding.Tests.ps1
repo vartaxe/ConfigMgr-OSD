@@ -64,4 +64,20 @@ Describe 'Hub branding' {
             $Validation | Should -Match ([regex]::Escape("Result.$Gate"))
         }
     }
+
+    It 'documents private vulnerability reporting and action updates' {
+        $Security = Get-Content -LiteralPath (Join-Path $Root 'SECURITY.md') -Raw
+        $Security | Should -Match 'security advisory reporting flow'
+
+        $Dependabot = Get-Content -LiteralPath (Join-Path $Root '.github\dependabot.yml') -Raw
+        $Dependabot | Should -Match 'package-ecosystem: github-actions'
+        $Dependabot | Should -Match 'interval: monthly'
+    }
+
+    It 'provides a focused pull request checklist' {
+        $Template = Get-Content -LiteralPath (Join-Path $Root '.github\pull_request_template.md') -Raw
+        $Template | Should -Match 'Invoke-Validation\.ps1'
+        $Template | Should -Match 'No credentials'
+        $Template | Should -Match 'destructive OSD guidance'
+    }
 }
