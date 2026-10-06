@@ -57,6 +57,14 @@ Describe 'Hub branding' {
         $Workflow | Should -Match 'Register-PSRepository -Default'
     }
 
+    It 'pins Pester 6.2.0 in CI and local validation' {
+        $Workflow = Get-Content -LiteralPath (Join-Path $Root '.github\workflows\ci.yml') -Raw
+        $Validation = Get-Content -LiteralPath (Join-Path $Root 'build\Invoke-Validation.ps1') -Raw
+        $Workflow | Should -Match "Install-Module Pester -RequiredVersion '6\.2\.0'"
+        $Workflow | Should -Match "Import-Module Pester -RequiredVersion '6\.2\.0'"
+        $Validation | Should -Match "Import-Module Pester -RequiredVersion '6\.2\.0'"
+    }
+
     It 'fails validation for incomplete or nonpassing test runs' {
         $Validation = Get-Content -LiteralPath (Join-Path $Root 'build\Invoke-Validation.ps1') -Raw
         foreach ($Gate in 'Result', 'TotalCount', 'FailedCount', 'FailedContainersCount',
