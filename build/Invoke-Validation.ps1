@@ -5,7 +5,7 @@ $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $PSScriptRoot
 $AnalyzerSettings = Join-Path $Root 'PSScriptAnalyzerSettings.psd1'
 
-Import-Module Pester -RequiredVersion '5.7.1' -ErrorAction Stop
+Import-Module Pester -RequiredVersion '6.2.0' -ErrorAction Stop
 Import-Module PSScriptAnalyzer -RequiredVersion '1.25.0' -ErrorAction Stop
 
 $Findings = @(
