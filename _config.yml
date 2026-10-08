@@ -1,0 +1,51 @@
+title: ConfigMgr OSD Script Hub
+description: "Hub for safety-focused ConfigMgr OSD PowerShell scripts: AD group membership, OSD log upload, disk layout."
+theme: jekyll-theme-cayman
+url: https://vartaxe.github.io
+baseurl: /ConfigMgr-OSD
+repository: vartaxe/ConfigMgr-OSD
+lang: en
+author: Claudio Mendes
+show_downloads: false
+
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-seo-tag
+
+relative_links:
+  enabled: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+navigation:
+  - title: Profile
+    url: https://vartaxe.github.io/vartaxe/
+  - title: AD groups
+    url: https://vartaxe.github.io/ConfigMgr-OSD-AddComputerToADGroup/
+  - title: OSD logs
+    url: https://vartaxe.github.io/ConfigMgr-OSD-CopyOSDLogToFileShare/
+  - title: Disk layout
+    url: https://vartaxe.github.io/ConfigMgr-OSD-DiskPartitionLayout/
+  - title: Sponsor
+    url: https://github.com/sponsors/vartaxe
+
+buttons:
+  - title: View source
+    url: https://github.com/vartaxe/ConfigMgr-OSD
+  - title: Profile
+    url: https://github.com/vartaxe
+
+exclude:
+  - README.md
+  - Tests
+  - build
+  - .github
+  - .vscode
+  - Gemfile
+  - Gemfile.lock
+  - vendor
