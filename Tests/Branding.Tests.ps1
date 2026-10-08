@@ -74,9 +74,13 @@ Describe 'Hub branding' {
         }
     }
 
-    It 'documents private vulnerability reporting' {
+    It 'documents private vulnerability reporting and action updates' {
         $Security = Get-Content -LiteralPath (Join-Path $Root 'SECURITY.md') -Raw
         $Security | Should -Match 'security advisory reporting flow'
+
+        $Dependabot = Get-Content -LiteralPath (Join-Path $Root '.github\dependabot.yml') -Raw
+        $Dependabot | Should -Match 'package-ecosystem: github-actions'
+        $Dependabot | Should -Match 'interval: monthly'
     }
 
     It 'provides a focused pull request checklist' {
