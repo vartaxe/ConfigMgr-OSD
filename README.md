@@ -1,4 +1,9 @@
-# ConfigMgr OSD Script Hub
+# ConfigMgr OSD Script Hub (archived)
+
+> **Hub moved:** The public landing page is now maintained at
+> [vartaxe.github.io](https://vartaxe.github.io/). This repository is retained
+> read-only for history and provenance; the individual script repositories remain
+> the authoritative sources for code, documentation, tests, releases, and checksums.
 
 [![CI](https://github.com/vartaxe/ConfigMgr-OSD/actions/workflows/ci.yml/badge.svg)](https://github.com/vartaxe/ConfigMgr-OSD/actions/workflows/ci.yml) ![PowerShell 5.1](https://img.shields.io/badge/PowerShell-5.1-blue) [![License](https://img.shields.io/github/license/vartaxe/ConfigMgr-OSD)](LICENSE)
 
